@@ -22,12 +22,7 @@ app.use(
   })
 );
 
-app.use(
-  fileUpload({
-    useTempFiles: true,
-    tempFileDir: "/tmp/",
-  })
-);
+app.use( fileUpload());
 app.use("/upload", express.static("upload"));
 
 (
